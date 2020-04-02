@@ -16,7 +16,7 @@ jobs:
       - run: mvn complie -e -X
   Testing:
     working_directory: ~/Practica 3.2
-      docker:
+    docker:
         - image: circleci/openjdk:8-jdk-stretch
       step: 
         - run:
