@@ -24,7 +24,7 @@ jobs:
         comand: 
           echo 'Haciendo pruebas'
       - ckeckout
-      -run: mvn test -e -X
+      - run: mvn test -e -X
   Run-Package:
     working_directory: ~/Practica 3.2
     docker:
