@@ -17,18 +17,18 @@ jobs:
   Testing:
     working_directory: ~/Practica 3.2
     docker:
-        - image: circleci/openjdk:8-jdk-stretch
-      step: 
-        - run:
-            name: Las Pruebas
-            comand: 
-              echo 'Haciendo pruebas'
-        - ckeckout
-        -run: mvn test -e -X
+      - image: circleci/openjdk:8-jdk-stretch
+    steps: 
+      - run:
+        name: Las Pruebas
+        comand: 
+          echo 'Haciendo pruebas'
+      - ckeckout
+      -run: mvn test -e -X
   Run-Package:
     working_directory: ~/Practica 3.2
     docker:
       - image: circleci/openjdk:8-jdk-stretch
-    step:
+    steps:
       - checkout
       - run: mvn package -e -X
